@@ -1,5 +1,6 @@
-#!/bin/bash
-
+#!/bin/bash -x
+echo "XXXXXXXXXXXXXX : This doesn't work with gigaspaces-xap-premium-12.2.0-m9-b18010 : XXXXXXXXXXXXX "
+exit 1
 webuis () {
   ps -ef | grep java | grep -i webui
 }
