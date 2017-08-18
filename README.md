@@ -2,6 +2,11 @@ Scripts for running XAP from the datacenter for the demo at https://github.com/G
 
 For demo purposes, our datacenter is the laptop powering the PI robot army.
 
+## Warnings
+
+These scripts have been modified to on OSX... 
+With build gigaspaces-xap-premium-12.2.0-m9-b18010, there is a problem booting webui...
+
 #### Algorithm
 
 ```bash
