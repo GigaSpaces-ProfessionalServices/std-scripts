@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /opt/xap/scripts/project-env-settings.sh
+source /Users/jason/scratch/scripts/datacenter-settings.sh
 
 readonly LOGDIR="${BD}/logs"
 readonly GCLOGDIR="${BD}/gclogs"
@@ -24,4 +24,3 @@ then
 fi
 
 sleep 1
-exit 0

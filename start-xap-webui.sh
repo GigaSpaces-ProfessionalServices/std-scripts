@@ -12,7 +12,7 @@ then
 fi
 
 . ./archive-webui-logs.sh
-source /opt/xap/scripts/project-env-settings.sh
+source /Users/jason/scratch/scripts/datacenter-settings.sh
 
 export USER_NAME_MANDATORY=true
 

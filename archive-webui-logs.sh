@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /opt/xap/scripts/project-env-settings.sh
+source /Users/jason/scratch/scripts/datacenter-settings.sh
 
 readonly LOG_ARCHIVE="webui-logs.$(date +%Y-%m-%d-%H-%M-%S).tar"
 readonly WDIR=$(pwd)

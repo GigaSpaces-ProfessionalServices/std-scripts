@@ -1,5 +1,5 @@
 #!/bin/sh
-source /opt/xap/scripts/project-env-settings.sh
+source /Users/jason/scratch/scripts/datacenter-settings.sh
 
 export EXT_JAVA_OPTIONS="-Dcom.gs.licensekey=Version=12;otherStuffGoesHereTypically -Dcom.gs.get-build=false"
 

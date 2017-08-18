@@ -13,10 +13,10 @@ fi
 
 . ./archive-xap-logs.sh
 
-source /opt/xap/scripts/project-env-settings.sh
+source ${BASE_DIR}/scripts/datacenter-settings.sh
 
 LOG_DIR="${BASE_DIR}/logs"
 
-nohup ${XAP_HOME}/bin/gs-agent.sh gsa.gsc 2 gsa.gsm 1 gsa.lus 1 &> ${LOG_DIR}/gs-agent-console-log.$(date +%Y-%m-%d-%H-%M-%S).log &
+${XAP_HOME}/bin/gs-agent.sh gsa.gsc 2 gsa.gsm 1 gsa.lus 1 &> ${LOG_DIR}/gs-agent-console-log.$(date +%Y-%m-%d-%H-%M-%S).log &
 
 sleep 1
