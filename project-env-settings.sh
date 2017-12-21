@@ -15,7 +15,8 @@ export MGT_HEAP="-Xmx1g -Xms1g"
 export WEBUI_HEAP="-Xms2g -Xmx2g"
 export GSC_HEAP="-Xmx11g -Xms11g -XX:+UseCompressedOops -XX:+HeapDumpOnOutOfMemoryError"
 
-export GC="-XX:+UseG1GC -XX:+PrintGC -XX:+ExplicitGCInvokesConcurrent -Xloggc:${BASE_DIR}/gclogs/gc_%p.log"
+export GC_LOG_ROTATE="-XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=512 -XX:GCLogFileSize=2M"
+export GC="-XX:+UseG1GC -XX:+PrintGC -XX:+ExplicitGCInvokesConcurrent -Xloggc:${BASE_DIR}/gclogs/gc_%p.log ${GC_LOG_ROTATE}"
 # GC_DEBUG provides verbose logging to gc log files and heap dumps for "should never happen" situations. Should only be necessary for GSCs.
 export GC_DEBUG="-XX:+PrintGC -XX:+PrintGCCause -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime -XX:+PrintAdaptiveSizePolicy -XX:+PrintTenuringDistribution -XX:-PrintReferenceGC -XX:+PrintClassHistogramBeforeFullGC -XX:+PrintClassHistogramAfterFullGC -XX:+HeapDumpBeforeFullGC -XX:+HeapDumpAfterFullGC -XX:+PrintParallelOldGCPhaseTimes"
 export SECURITY="-Dcom.gs.security.enabled=true -Dcom.gs.security.fs.file-service.file-path=${BASE_DIR}/security/gs-directory.fsm -Dcom.gigaspaces.logger.RollingFileHandler.filename-pattern.homedir=${BASE_DIR}"
