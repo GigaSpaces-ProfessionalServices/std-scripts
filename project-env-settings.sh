@@ -30,4 +30,4 @@ export XAP_GSM_OPTIONS="${MGT_HEAP} ${COMMON_XAP_OPTIONS_WORK}"
 export XAP_LUS_OPTIONS="${MGT_HEAP} ${COMMON_XAP_OPTIONS_WORK}"
 export XAP_GSA_OPTIONS="${MGT_HEAP} ${COMMON_XAP_OPTIONS_WORK}"
 export XAP_GSC_OPTIONS="${GSC_HEAP} ${COMMON_XAP_OPTIONS_WORK} ${GC_DEBUG}" # AGENT INFO SHOULD BE ADDED HERE
-export XAP_WEBUI_OPTIONS="${WEBUI_HEAP} ${COMMON_XAP_OPTIONS} ${SECURITY} -Dcom.gs.transport_protocol.lrmi.request_timeout=30000"                                                                                                                                      
+export XAP_WEBUI_OPTIONS="${WEBUI_HEAP} ${COMMON_XAP_OPTIONS} ${SECURITY}"                                                                                                                                      
