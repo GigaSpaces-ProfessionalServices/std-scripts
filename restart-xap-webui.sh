@@ -5,7 +5,7 @@ source /opt/xap/scripts/project-env-settings.sh
 readonly TCP_TIMEOUT=63
 readonly BASHPID=$$
 
-WEBUIPID=$(ps ax | grep "GS Web UI" | head -1 | awk '{ print $1 }')
+WEBUIPID=$(ps ax | grep "GS Web UI" | grep -v grep | head -1 | awk '{ print $1 }')
 
 if [ "${BASHPID}" -ne "${WEBUIPID}" ];
 then
