@@ -15,6 +15,12 @@ fi
 
 source /opt/ccs/xap/scripts/ccs-RELEASE-settings.sh
 
-nohup ${XAP_HOME}/bin/gs-agent.sh gsa.gsc 3 --manager &> ${LOG_DIR}/gs-agent-console-log.$(date +%Y-%m-%d-%H-%M-%S).log &
+if [ ${HOSTNAME} = 'htappd01130.qcorpaa.aa.com' ] || [ ${HOSTNAME} = 'htappd01131.qcorpaa.aa.com' ] || [ ${HOSTNAME} = 'htappd01132.qcorpaa.aa.com' ];
+then
+  nohup ${XAP_HOME}/bin/gs-agent.sh gsa.gsc 3 --manager &> ${LOG_DIR}/gs-agent-console-log.$(date +%Y-%m-%d-%H-%M-%S).log &
+else
+  nohup ${XAP_HOME}/bin/gs-agent.sh gsa.gsc 3  &> ${LOG_DIR}/gs-agent-console-log.$(date +%Y-%m-%d-%H-%M-%S).log &
+fi
+
 
 sleep 1
