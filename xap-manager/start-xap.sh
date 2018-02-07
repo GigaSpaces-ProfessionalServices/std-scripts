@@ -11,11 +11,11 @@ then
   exit 1
 fi
 
-. ../archive-xap-logs.sh
 
-source /opt/ccs/xap/scripts/ccs-RELEASE-settings.sh
 
-if [ ${HOSTNAME} = 'htappd01130.qcorpaa.aa.com' ] || [ ${HOSTNAME} = 'htappd01131.qcorpaa.aa.com' ] || [ ${HOSTNAME} = 'htappd01132.qcorpaa.aa.com' ];
+source ../ccs-RELEASE-settings.sh
+
+if [ ${HOSTNAME} = 'host1' ] || [ ${HOSTNAME} = 'host2' ] || [ ${HOSTNAME} = 'host3' ];
 then
   nohup ${XAP_HOME}/bin/gs-agent.sh gsa.gsc 3 --manager &> ${LOG_DIR}/gs-agent-console-log.$(date +%Y-%m-%d-%H-%M-%S).log &
 else

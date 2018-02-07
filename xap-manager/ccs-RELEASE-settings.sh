@@ -2,14 +2,14 @@
 
 export JAVA_HOME="/usr/java/latest"
 
-export XAP_HOME="/opt/ccs/xap/current"
+export XAP_HOME="/opt/xap/current"
 export BASE_DIR="${XAP_HOME}/.."
 export LOG_DIR="${BASE_DIR}/logs"
 
 export XAP_NIC_ADDRESS="$(hostname)"
 export UNICAST_PORT="7101"
-export XAP_LOOKUP_GROUPS="ccsdev2"
-export XAP_MANAGER_SERVERS="htappd01130.qcorpaa.aa.com:${UNICAST_PORT},htappd01131.qcorpaa.aa.com:${UNICAST_PORT},htappd01132.qcorpaa.aa.com:${UNICAST_PORT}"
+export XAP_LOOKUP_GROUPS="test"
+export XAP_MANAGER_SERVERS="host1:${UNICAST_PORT},host2:${UNICAST_PORT},host3:${UNICAST_PORT}"
 
 export LRMI="-Djava.rmi.server.hostname=${XAP_NIC_ADDRESS} -Dcom.gs.multicast.enabled=false -Dcom.gs.multicast.discoveryPort=${UNICAST_PORT} -Dcom.gigaspaces.start.httpPort=7003 -Dcom.gigaspaces.system.registryPort=7004 -Dcom.gs.transport_protocol.lrmi.bind-port="7110-10000" -Dcom.sun.jini.reggie.initialUnicastDiscoveryPort=${UNICAST_PORT}"
 
@@ -24,7 +24,7 @@ export GC_GSC="-XX:MaxGCPauseMillis=400 -XX:+UseCompressedOops -XX:InitiatingHea
 export GC_DEBUG="-XX:+PrintGC -XX:+PrintGCCause -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCApplicationConcurrentTime -XX:+PrintAdaptiveSizePolicy -XX:+PrintTenuringDistribution -XX:-PrintReferenceGC -XX:+PrintClassHistogramBeforeFullGC -XX:+PrintClassHistogramAfterFullGC -XX:+PrintParallelOldGCPhaseTimes"
 
 export SECURITY="-Dcom.gs.security.enabled=true -Dcom.gs.security.fs.file-service.file-path=${BASE_DIR}/security/gs-directory.fsm -Dcom.gigaspaces.logger.RollingFileHandler.filename-pattern.homedir=${BASE_DIR}"
-export AGENT="-agentpath:/opt/DT/libdtagent.so=name=Gigaspaces_Dev,server=otapnd71.qcorpaa.aa.com:9998,logpath=/opt/DT/log"
+
 
 export COMMON_XAP_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+PrintCommandLineFlags -XX:+PrintFlagsFinal -Dcom.gs.deploy=${BASE_DIR}/deploy ${LRMI} ${GC_COMMON} ${SECURITY}"
 export WORK="-Dcom.gs.work=${XAP_HOME}/work -Dgs.gc.collectionTimeThresholdWarning=10000"
